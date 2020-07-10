@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GUIController">
+   <children>
+      <Button layoutX="61.0" layoutY="79.0" mnemonicParsing="false" onAction="#startGame" style="-fx-background-color: grey;" text="Начать" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="34.0" layoutY="31.0" text="Игра БУНКЕР" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ListView fx:id="playerslist" layoutX="372.0" layoutY="83.0" prefHeight="287.0" prefWidth="196.0" />
+      <Label layoutX="379.0" layoutY="38.0" text="Список игроков">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="cardChoiser" layoutX="22.0" layoutY="201.0" prefWidth="150.0" style="-fx-background-color: grey;" />
+      <TextField fx:id="nickField" layoutX="194.0" layoutY="201.0" />
+      <Label layoutX="22.0" layoutY="171.0" text="Карты дейстия">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="171.0" text="Ник игрока(если применим)">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="194.0" layoutY="241.0" mnemonicParsing="false" onAction="#useCard" style="-fx-background-color: pink;" text="Использовать карту" />
+   </children>
+</AnchorPane>
