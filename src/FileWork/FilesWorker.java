@@ -58,7 +58,7 @@ public class FilesWorker {
             while (scanner.hasNextLine())
                 gameParametrs.add(scanner.nextLine());
             gameFiles.put(f.getName(),new GameFile(gameParametrs));
-            if(f.getName().equals("bunker") | f.getName().equals("katastrof"))
+            if(f.getName().equals("bunker") | f.getName().equals("katastrof") | f.getName().equals("healthStadia"))
                 continue;
             gameFields.add(f.getName());
         }

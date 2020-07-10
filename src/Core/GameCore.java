@@ -50,12 +50,14 @@ public class GameCore extends Thread {
                 temp = gameFiles.get(gameField).getGameParametr();
                 if (gameField.equals("prof") | gameField.equals("hobby"))
                     stage = "  Стаж " + (int) (Math.random() * (age - 18)) + " лет";
+                if (gameField.equals("health"))
+                    stage = "  Стадия(если применимо) " + gameFiles.get("healthStadia").getGameParametr().get((int) (Math.random() * gameFiles.get("healthStadia").getGameParametr().size())) + "";
                 player.put(gameField, temp.get((int) (Math.random() * temp.size())) + stage);
             }
             players.add(new Player(player, messageChannels.get(i).getName()));
             answer += katastrof + " " + bunker + "\n\n\n";
             for (Map.Entry item : player.entrySet()) {
-                answer += item.getValue() + "\n";
+                answer += item.getValue() + "\n_______________________\n";
             }
             messageChannels.get(i).sendMessage(ageAndGender + "\n" + answer).queue();
         }
