@@ -20,6 +20,8 @@ public class MessageListener extends ListenerAdapter {
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
 
         if (event.getMessage().getContentRaw().toLowerCase().equals("play")) {
+            if(messageChannels.contains(event.getMessage().getChannel()))
+                return;
             messageChannels.add(event.getMessage().getChannel());
             System.out.println(event.getMessage().getContentRaw());
         }
