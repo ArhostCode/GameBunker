@@ -17,6 +17,7 @@ public class Bot extends Thread{
 
     @Override
     public void run() {
+        System.out.println(token);
         JDA jda = null;
         try {
             jda = JDABuilder.createDefault(token).build();
